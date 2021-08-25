@@ -1,5 +1,7 @@
 package main
 
-func main() {
+import "easylog/preload"
 
+func main() {
+	preload.Init()
 }
