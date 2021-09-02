@@ -14,7 +14,10 @@ type loginInfo struct {
 
 func setupRouter()  {
 	router := gin.Default()
-	router.GET("/login", loginCheck)
+	router.GET("/demo/login", loginCheck)
+	router.GET("/demo/ready", func(ctx *gin.Context) {
+		ctx.String(200, "success")
+	})
 	_ = http.ListenAndServe(":8989", router)
 }
 
